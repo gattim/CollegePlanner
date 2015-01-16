@@ -8,159 +8,187 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid x:Name="Calendar" HorizontalAlignment="Right" Height="670" Margin="0,20,26,78" VerticalAlignment="Center" Width="700">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Calendar" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/CalendarBackground.jpg"/>
             </Grid.Background>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,50,0,0">
-                <Rectangle x:Name="rect0x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Rectangle x:Name="rect0x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed" />
                 <TextBlock x:Name="txt0x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,50,0,0">
-                <Rectangle x:Name="rect0x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Rectangle x:Name="rect0x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt0x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,50,0,0">
-                <Rectangle x:Name="rect0x2" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Rectangle x:Name="rect0x2" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt0x2" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,50,0,0">
-                <Rectangle x:Name="rect0x3" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="3">
+                <Rectangle x:Name="rect0x3" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed" />
                 <TextBlock x:Name="txt0x3" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,50,0,0">
-                <Rectangle x:Name="rect0x4" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="4">
+                <Rectangle x:Name="rect0x4" Fill="#FFF5F5F4"  Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt0x4" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,50,0,0">
-                <Rectangle x:Name="rect0x5" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="5">
+                <Rectangle x:Name="rect0x5" Fill="#FFF5F5F4"  Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt0x5" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,50,0,0">
-                <Rectangle x:Name="rect0x6" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="1" Grid.Column="6">
+                <Rectangle x:Name="rect0x6" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt0x6" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,150,0,0">
-                <Rectangle x:Name="rect1x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Rectangle x:Name="rect1x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,150,0,0">
-                <Rectangle x:Name="rect1x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Rectangle x:Name="rect1x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,150,0,0">
-                <Rectangle x:Name="rect1x2" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Rectangle x:Name="rect1x2" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x2" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,150,0,0">
-                <Rectangle x:Name="rect1x3" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="3">
+                <Rectangle x:Name="rect1x3" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x3" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,150,0,0">
-                <Rectangle x:Name="rect1x4" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="4">
+                <Rectangle x:Name="rect1x4" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x4" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,150,0,0">
-                <Rectangle x:Name="rect1x5" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="5">
+                <Rectangle x:Name="rect1x5" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x5" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,150,0,0">
-                <Rectangle x:Name="rect1x6" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="2" Grid.Column="6">
+                <Rectangle x:Name="rect1x6" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt1x6" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,250,0,0">
-                <Rectangle x:Name="rect2x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Rectangle x:Name="rect2x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,250,0,0">
-                <Rectangle x:Name="rect2x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Rectangle x:Name="rect2x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,250,0,0">
-                <Rectangle x:Name="rect2x2" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Rectangle x:Name="rect2x2" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x2" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,250,0,0">
-                <Rectangle x:Name="rect2x3" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="3">
+                <Rectangle x:Name="rect2x3" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x3" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,250,0,0">
-                <Rectangle x:Name="rect2x4" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="4">
+                <Rectangle x:Name="rect2x4" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x4" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,250,0,0">
-                <Rectangle x:Name="rect2x5" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="5">
+                <Rectangle x:Name="rect2x5" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x5" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,250,0,0">
-                <Rectangle x:Name="rect2x6" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="3" Grid.Column="6">
+                <Rectangle x:Name="rect2x6" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt2x6" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,350,0,0">
-                <Rectangle x:Name="rect3x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="0">
+                <Rectangle x:Name="rect3x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,350,0,0">
-                <Rectangle x:Name="rect3x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="1">
+                <Rectangle x:Name="rect3x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,350,0,0">
-                <Rectangle x:Name="rect3x2" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="2">
+                <Rectangle x:Name="rect3x2" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x2" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,350,0,0">
-                <Rectangle x:Name="rect3x3" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="3">
+                <Rectangle x:Name="rect3x3" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x3" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,350,0,0">
-                <Rectangle x:Name="rect3x4" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="4">
+                <Rectangle x:Name="rect3x4" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x4" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,350,0,0">
-                <Rectangle x:Name="rect3x5" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="5">
+                <Rectangle x:Name="rect3x5" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x5" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,350,0,0">
-                <Rectangle x:Name="rect3x6" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="4" Grid.Column="6">
+                <Rectangle x:Name="rect3x6" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt3x6" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,450,0,0">
-                <Rectangle x:Name="rect4x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="0">
+                <Rectangle x:Name="rect4x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,450,0,0">
-                <Rectangle x:Name="rect4x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <Rectangle x:Name="rect4x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,450,0,0">
-                <Rectangle x:Name="rect4x2" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="2">
+                <Rectangle x:Name="rect4x2" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x2" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,450,0,0">
-                <Rectangle x:Name="rect4x3" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="3">
+                <Rectangle x:Name="rect4x3" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x3" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,450,0,0">
-                <Rectangle x:Name="rect4x4" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="4">
+                <Rectangle x:Name="rect4x4" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x4" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,450,0,0">
-                <Rectangle x:Name="rect4x5" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="5">
+                <Rectangle x:Name="rect4x5" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x5" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,450,0,0">
-                <Rectangle x:Name="rect4x6" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="5" Grid.Column="6">
+                <Rectangle x:Name="rect4x6" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt4x6" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,550,0,0">
-                <Rectangle x:Name="rect5x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="6" Grid.Column="0">
+                <Rectangle x:Name="rect5x0" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt5x0" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,550,0,0">
-                <Rectangle x:Name="rect5x1" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>
+            <Grid Grid.Row="6" Grid.Column="1">
+                <Rectangle x:Name="rect5x1" Fill="#FFF5F5F4" Stroke="DarkBlue" PointerPressed="rect_PointerPressed"/>
                 <TextBlock x:Name="txt5x1" HorizontalAlignment="Right" Margin="0,5,5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="DarkBlue" FontWeight="ExtraBold"/>
             </Grid>
-            <DatePicker x:Name="datePicker" HorizontalAlignment="Center" DayVisible="False" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="DarkBlue" DateChanged="datePicker_DateChanged"/>
+            <DatePicker x:Name="datePicker" HorizontalAlignment="Center" DayVisible="False" Margin="52,10,33,0" VerticalAlignment="Top" Foreground="DarkBlue" DateChanged="datePicker_DateChanged" Grid.Column="2" Grid.ColumnSpan="3"/>
         </Grid>
     </Grid>
 </Page>

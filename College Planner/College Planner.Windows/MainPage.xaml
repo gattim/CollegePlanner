@@ -10,10 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid x:Name="Calendar" HorizontalAlignment="Right" Height="670" Margin="0,20,26,78" VerticalAlignment="Center" Width="700">
             <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="DarkBlue"/>
-                    <GradientStop Color="#FF2C0CFF" Offset="1"/>
-                </LinearGradientBrush>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/CalendarBackground.jpg"/>
             </Grid.Background>
             <Grid Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,50,0,0">
                 <Rectangle x:Name="rect0x0" Fill="#FFF5F5F4" Height="100"  Stroke="DarkBlue"  Width="100" PointerPressed="rect_PointerPressed"/>

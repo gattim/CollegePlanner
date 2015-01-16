@@ -65,154 +65,143 @@ namespace College_Planner
                     case 1:
                         txt0x0.Text = i.ToString();
                         rect0x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x0.PointerPressed += rect_PointerPressed;
                         break;
                     case 2:
                         txt0x1.Text = i.ToString();
                         rect0x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x1.PointerPressed += rect_PointerPressed;
                         break;
                     case 3:
                         txt0x2.Text = i.ToString();
                         rect0x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x2.PointerPressed += rect_PointerPressed;
                         break;
                     case 4:
                         txt0x3.Text = i.ToString();
                         rect0x3.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x3.PointerPressed += rect_PointerPressed;
                         break;
                     case 5:
                         txt0x4.Text = i.ToString();
                         rect0x4.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x4.PointerPressed += rect_PointerPressed;
                         break;
                     case 6:
                         txt0x5.Text = i.ToString();
                         rect0x5.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect0x5.PointerPressed += rect_PointerPressed;
                         break;
                     case 7:
                         txt0x6.Text = i.ToString();
-                        rect0x6.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 8:
                         txt1x0.Text = i.ToString();
-                        rect1x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 9:
                         txt1x1.Text = i.ToString();
-                        rect1x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 10:
                         txt1x2.Text = i.ToString();
-                        rect1x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 11:
                         txt1x3.Text = i.ToString();
-                        rect1x3.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 12:
                         txt1x4.Text = i.ToString();
-                        rect1x4.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 13:
                         txt1x5.Text = i.ToString();
-                        rect1x5.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 14:
                         txt1x6.Text = i.ToString();
-                        rect1x6.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 15:
                         txt2x0.Text = i.ToString();
-                        rect2x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 16:
                         txt2x1.Text = i.ToString();
-                        rect2x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 17:
                         txt2x2.Text = i.ToString();
-                        rect2x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 18:
                         txt2x3.Text = i.ToString();
-                        rect2x3.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 19:
                         txt2x4.Text = i.ToString();
-                        rect2x4.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 20:
                         txt2x5.Text = i.ToString();
-                        rect2x5.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 21:
                         txt2x6.Text = i.ToString();
-                        rect2x6.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 22:
                         txt3x0.Text = i.ToString();
-                        rect3x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 23:
                         txt3x1.Text = i.ToString();
-                        rect3x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 24:
                         txt3x2.Text = i.ToString();
-                        rect3x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 25:
                         txt3x3.Text = i.ToString();
-                        rect3x3.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 26:
                         txt3x4.Text = i.ToString();
-                        rect3x4.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 27:
                         txt3x5.Text = i.ToString();
-                        rect3x5.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 28:
                         txt3x6.Text = i.ToString();
-                        rect3x6.Fill = new SolidColorBrush(Colors.WhiteSmoke);
                         break;
                     case 29:
                         txt4x0.Text = i.ToString();
                         rect4x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x0.PointerPressed += rect_PointerPressed;
                         break;
                     case 30:
                         txt4x1.Text = i.ToString();
                         rect4x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x1.PointerPressed += rect_PointerPressed;
                         break;
                     case 31:
                         txt4x2.Text = i.ToString();
                         rect4x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x3.PointerPressed += rect_PointerPressed;
                         break;
                     case 32:
                         txt4x3.Text = i.ToString();
                         rect4x3.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x3.PointerPressed += rect_PointerPressed;
                         break;
                     case 33:
                         txt4x4.Text = i.ToString();
                         rect4x4.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x4.PointerPressed += rect_PointerPressed;
                         break;
                     case 34:
                         txt4x5.Text = i.ToString();
                         rect4x5.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x5.PointerPressed += rect_PointerPressed;
                         break;
                     case 35:
                         txt4x6.Text = i.ToString();
                         rect4x6.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect4x6.PointerPressed += rect_PointerPressed;
                         break;
                     case 36:
                         txt5x0.Text = i.ToString();
                         rect5x0.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect5x0.PointerPressed += rect_PointerPressed;
                         break;
                     case 37:
                         txt5x1.Text = i.ToString();
                         rect5x1.Fill = new SolidColorBrush(Colors.WhiteSmoke);
-                        break;
-                    case 38:
-                        txt5x2.Text = i.ToString();
-                        rect5x2.Fill = new SolidColorBrush(Colors.WhiteSmoke);
+                        rect5x1.PointerPressed += rect_PointerPressed;
                         break;
                 }
             }      
@@ -229,52 +218,37 @@ namespace College_Planner
         }
 
         private void clearMonth() {
-            changeDayColors(Colors.DarkBlue);
-        }
+            rect0x0.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect0x1.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect0x2.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect0x3.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect0x4.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect0x5.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x0.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x1.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x2.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x3.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x4.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x5.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect4x6.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect5x0.Fill = new SolidColorBrush(Colors.DarkBlue);
+            rect5x1.Fill = new SolidColorBrush(Colors.DarkBlue);
 
-        private void changeDayColors(Color c) {
-            rect0x0.Fill = new SolidColorBrush(c);
-            rect0x1.Fill = new SolidColorBrush(c);
-            rect0x2.Fill = new SolidColorBrush(c);
-            rect0x3.Fill = new SolidColorBrush(c);
-            rect0x4.Fill = new SolidColorBrush(c);
-            rect0x5.Fill = new SolidColorBrush(c);
-            rect0x6.Fill = new SolidColorBrush(c);
-            rect0x0.Fill = new SolidColorBrush(c);
-            rect0x1.Fill = new SolidColorBrush(c);
-            rect0x2.Fill = new SolidColorBrush(c);
-            rect0x3.Fill = new SolidColorBrush(c);
-            rect0x4.Fill = new SolidColorBrush(c);
-            rect0x5.Fill = new SolidColorBrush(c);
-            rect0x6.Fill = new SolidColorBrush(c);
-            rect1x0.Fill = new SolidColorBrush(c);
-            rect1x1.Fill = new SolidColorBrush(c);
-            rect1x2.Fill = new SolidColorBrush(c);
-            rect1x3.Fill = new SolidColorBrush(c);
-            rect1x4.Fill = new SolidColorBrush(c);
-            rect1x5.Fill = new SolidColorBrush(c);
-            rect1x6.Fill = new SolidColorBrush(c);
-            rect2x0.Fill = new SolidColorBrush(c);
-            rect2x1.Fill = new SolidColorBrush(c);
-            rect2x2.Fill = new SolidColorBrush(c);
-            rect2x3.Fill = new SolidColorBrush(c);
-            rect2x4.Fill = new SolidColorBrush(c);
-            rect2x5.Fill = new SolidColorBrush(c);
-            rect2x6.Fill = new SolidColorBrush(c);
-            rect4x0.Fill = new SolidColorBrush(c);
-            rect4x1.Fill = new SolidColorBrush(c);
-            rect4x2.Fill = new SolidColorBrush(c);
-            rect4x3.Fill = new SolidColorBrush(c);
-            rect4x4.Fill = new SolidColorBrush(c);
-            rect4x5.Fill = new SolidColorBrush(c);
-            rect4x6.Fill = new SolidColorBrush(c);
-            rect5x0.Fill = new SolidColorBrush(c);
-            rect5x1.Fill = new SolidColorBrush(c);
-            rect5x2.Fill = new SolidColorBrush(c);
-            rect5x3.Fill = new SolidColorBrush(c);
-            rect5x4.Fill = new SolidColorBrush(c);
-            rect5x5.Fill = new SolidColorBrush(c);
-            rect5x6.Fill = new SolidColorBrush(c);
+            rect0x0.PointerPressed -= rect_PointerPressed;
+            rect0x1.PointerPressed -= rect_PointerPressed;
+            rect0x2.PointerPressed -= rect_PointerPressed;
+            rect0x3.PointerPressed -= rect_PointerPressed;
+            rect0x4.PointerPressed -= rect_PointerPressed;
+            rect0x5.PointerPressed -= rect_PointerPressed;
+            rect4x0.PointerPressed -= rect_PointerPressed;
+            rect4x1.PointerPressed -= rect_PointerPressed;
+            rect4x2.PointerPressed -= rect_PointerPressed;
+            rect4x3.PointerPressed -= rect_PointerPressed;
+            rect4x4.PointerPressed -= rect_PointerPressed;
+            rect4x5.PointerPressed -= rect_PointerPressed;
+            rect4x6.PointerPressed -= rect_PointerPressed;
+            rect5x0.PointerPressed -= rect_PointerPressed;
+            rect5x1.PointerPressed -= rect_PointerPressed;
         }
     }
 }

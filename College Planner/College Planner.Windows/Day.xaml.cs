@@ -30,10 +30,11 @@ namespace College_Planner {
             rectBackground.Fill = new SolidColorBrush(Colors.WhiteSmoke);
         }
 
-        public void activate() {
+        public void activate(int dayNum) {
             txtDayOfMonth.Foreground = new SolidColorBrush(Colors.DarkBlue);
             rectBackground.Fill = new SolidColorBrush(Colors.WhiteSmoke);
             rectBackground.Stroke = new SolidColorBrush(Colors.DarkBlue);
+            txtDayOfMonth.Text = dayNum.ToString();
         }
 
         public void deactivate() {

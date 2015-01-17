@@ -1,0 +1,201 @@
+﻿<UserControl
+    x:Class="College_Planner.Month"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:College_Planner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid x:Name="Calendar">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Center" VerticalAlignment="Center" DayVisible="False" Foreground="DarkBlue" DateChanged="dateChanged" Grid.Row="0" Grid.ColumnSpan="7" Opacity="0.75"/>
+        <TextBlock x:Name="txtSun" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Text="Sunday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.15,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtMon" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="Monday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.3,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtTues" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Text="Tuesday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.42,.05">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtWed" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Text="Wednesday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint=".46,.05">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtThur" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" Text="Thursday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.47,.05">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtFri" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="5" Text="Friday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.48,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="txtSat" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="6" Text="Saturday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.45,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Grid Grid.Row="2" Grid.Column="0">
+            <local:Day x:Name="day1" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <local:Day x:Name="day2" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2">
+            <local:Day x:Name="day3" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="3">
+            <local:Day x:Name="day4" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="4">
+            <local:Day x:Name="day5" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="5">
+            <local:Day x:Name="day6" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="6">
+            <local:Day x:Name="day7" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <local:Day x:Name="day8" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1">
+            <local:Day x:Name="day9" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="2">
+            <local:Day x:Name="day10" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="3">
+            <local:Day x:Name="day11" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="4">
+            <local:Day x:Name="day12" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="5">
+            <local:Day x:Name="day13" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="6">
+            <local:Day x:Name="day14" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="0">
+            <local:Day x:Name="day15" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1">
+            <local:Day x:Name="day16" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2">
+            <local:Day x:Name="day17" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="3">
+            <local:Day x:Name="day18" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="4">
+            <local:Day x:Name="day19" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="5">
+            <local:Day x:Name="day20" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="6">
+            <local:Day x:Name="day21" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="0">
+            <local:Day x:Name="day22" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="1">
+            <local:Day x:Name="day23" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="2">
+            <local:Day x:Name="day24" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="3">
+            <local:Day x:Name="day25" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="4">
+            <local:Day x:Name="day26" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="5">
+            <local:Day x:Name="day27" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="6">
+            <local:Day x:Name="day28" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="0">
+            <local:Day x:Name="day29" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="1">
+            <local:Day x:Name="day30" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="2">
+            <local:Day x:Name="day31" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="3">
+            <local:Day x:Name="day32" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="4">
+            <local:Day x:Name="day33" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="5">
+            <local:Day x:Name="day34" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="6">
+            <local:Day x:Name="day35" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="7" Grid.Column="0">
+            <local:Day x:Name="day36" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+        <Grid Grid.Row="7" Grid.Column="1">
+            <local:Day x:Name="day37" PointerPressed="Day_PointerPressed"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

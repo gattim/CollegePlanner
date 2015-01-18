@@ -20,7 +20,8 @@ namespace College_Planner {
         public DaySchedule() {
             InitializeComponent();
             instantiateTimeText();
-            setUpTimer();
+            setUpTimers();
+            scrollViewer.ChangeView(null, 600000, null);
         }
 
         private void timer_Tick(object sender, object e) {
@@ -51,15 +52,27 @@ namespace College_Planner {
             hr20.setTime("2000");
             hr21.setTime("2100");
             hr22.setTime("2200");
-            hr23.setTime("2300");        
+            hr23.setTime("2300");
         }
 
-        private void setUpTimer() {
-            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), 0, 0);
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMinutes(1);
-            timer.Tick += timer_Tick;
-            timer.Start();
+        private void setUpTimers() {
+            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Second), 0, 0);
+
+            DispatcherTimer nowBarTimer = new DispatcherTimer();
+            nowBarTimer.Interval = TimeSpan.FromMinutes(1);
+            nowBarTimer.Tick += timer_Tick;
+            nowBarTimer.Start();
+
+            DispatcherTimer nowBarFocusTimer = new DispatcherTimer();
+            nowBarFocusTimer.Interval = TimeSpan.FromMilliseconds(1);
+            nowBarFocusTimer.Tick += nowBarFocusTimer_Tick;
+            nowBarFocusTimer.Start();
+        }
+
+        private void nowBarFocusTimer_Tick(object sender, object e) {
+            DispatcherTimer nowBarFocusTimer = sender as DispatcherTimer;
+            nowBarFocusTimer.Interval = TimeSpan.FromMinutes(5);
+            scrollViewer.ChangeView(null, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), null, false);
         }
     }
 }

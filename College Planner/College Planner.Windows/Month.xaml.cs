@@ -26,8 +26,7 @@ namespace College_Planner {
 
             instantiateDaysArray();
             clear();
-            populate(datePicker.Date.Year, datePicker.Date.Month);
-            selectedDay = days[DateTime.Today.Day-1];
+            populate(datePicker.Date.Year, datePicker.Date.Month);     
         }
 
         private void Day_PointerPressed(object sender, PointerRoutedEventArgs e) {
@@ -105,6 +104,11 @@ namespace College_Planner {
                     days[i].activate(i-firstWeekDayOfMonth+1);
                     days[i].PointerPressed += Day_PointerPressed;
                 }
+            }
+
+            if (year == DateTime.Now.Year && month == DateTime.Now.Month) {
+                selectedDay = days[DateTime.Today.Day - 1];
+                selectedDay.select();
             }
         }
 

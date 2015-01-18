@@ -27,6 +27,6 @@
         <Grid Grid.Column="2" Grid.Row="1">
             <local:DaySchedule/>
         </Grid>
-        
+        <StackPanel Grid.Column="0" Grid.Row="1"/>
     </Grid>
 </Page>

@@ -7,58 +7,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer BorderThickness="5,5,0,5" VerticalScrollBarVisibility="Hidden">
-            <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-                <local:Hour x:Name="hr0" Grid.Row="0"/>
-                <local:Hour x:Name="hr1" Grid.Row="1"/>
-                <local:Hour x:Name="hr2" Grid.Row="2"/>
-                <local:Hour x:Name="hr3" Grid.Row="3"/>
-                <local:Hour x:Name="hr4" Grid.Row="4"/>
-                <local:Hour x:Name="hr5" Grid.Row="5"/>
-                <local:Hour x:Name="hr6" Grid.Row="6"/>
-                <local:Hour x:Name="hr7" Grid.Row="7"/>
-                <local:Hour x:Name="hr8" Grid.Row="8"/>
-                <local:Hour x:Name="hr9" Grid.Row="9"/>
-                <local:Hour x:Name="hr10" Grid.Row="10"/>
-                <local:Hour x:Name="hr11" Grid.Row="11"/>
-                <local:Hour x:Name="hr12" Grid.Row="12"/>
-                <local:Hour x:Name="hr13" Grid.Row="13"/>
-                <local:Hour x:Name="hr14" Grid.Row="14"/>
-                <local:Hour x:Name="hr15" Grid.Row="15"/>
-                <local:Hour x:Name="hr16" Grid.Row="16"/>
-                <local:Hour x:Name="hr17" Grid.Row="17"/>
-                <local:Hour x:Name="hr18" Grid.Row="18"/>
-                <local:Hour x:Name="hr19" Grid.Row="19"/>
-                <local:Hour x:Name="hr20" Grid.Row="20"/>
-                <local:Hour x:Name="hr21" Grid.Row="21"/>
-                <local:Hour x:Name="hr22" Grid.Row="22"/>
-                <local:Hour x:Name="hr23" Grid.Row="23"/>
-                <!--<local:NowBar x:Name="nowBar" VerticalAlignment="Top" Margin="0,100,0,0"/>-->
-            </Grid>
+        <Canvas Height="1440">        
+            <local:Hour x:Name="hr0" Width="1361" VerticalAlignment="Top" Margin="0,0,0,0"/>
+            <local:Hour x:Name="hr1" Width="1361" VerticalAlignment="Top" Margin="0,60,0,0"/>
+            <local:Hour x:Name="hr2" Width="1361" VerticalAlignment="Top" Margin="0,120,0,0"/>
+            <local:Hour x:Name="hr3" Width="1361" VerticalAlignment="Top" Margin="0,180,0,0"/>
+            <local:Hour x:Name="hr4" Width="1361" VerticalAlignment="Top" Margin="0,240,0,0"/>
+            <local:Hour x:Name="hr5" Width="1361" VerticalAlignment="Top" Margin="0,300,0,0"/>
+            <local:Hour x:Name="hr6" Width="1361" VerticalAlignment="Top" Margin="0,360,0,0"/>
+            <local:Hour x:Name="hr7" Width="1361" VerticalAlignment="Top" Margin="0,420,0,0"/>
+            <local:Hour x:Name="hr8" Width="1361" VerticalAlignment="Top" Margin="0,480,0,0"/>
+            <local:Hour x:Name="hr9" Width="1361" VerticalAlignment="Top" Margin="0,540,0,0"/>
+            <local:Hour x:Name="hr10" Width="1361" VerticalAlignment="Top" Margin="0,600,0,0"/>
+            <local:Hour x:Name="hr11" Width="1361" VerticalAlignment="Top" Margin="0,660,0,0"/>
+            <local:Hour x:Name="hr12" Width="1361" VerticalAlignment="Top" Margin="0,720,0,0"/>
+            <local:Hour x:Name="hr13" Width="1361" VerticalAlignment="Top" Margin="0,780,0,0"/>
+            <local:Hour x:Name="hr14" Width="1361" VerticalAlignment="Top" Margin="0,840,0,0"/>
+            <local:Hour x:Name="hr15" Width="1361" VerticalAlignment="Top" Margin="0,900,0,0"/>
+            <local:Hour x:Name="hr16" Width="1361" VerticalAlignment="Top" Margin="0,960,0,0"/>
+            <local:Hour x:Name="hr17" Width="1361" VerticalAlignment="Top" Margin="0,1020,0,0"/>
+            <local:Hour x:Name="hr18" Width="1361" VerticalAlignment="Top" Margin="0,1080,0,0"/>
+            <local:Hour x:Name="hr19" Width="1361" VerticalAlignment="Top" Margin="0,1140,0,0"/>
+            <local:Hour x:Name="hr20" Width="1361" VerticalAlignment="Top" Margin="0,1200,0,0"/>
+            <local:Hour x:Name="hr21" Width="1361" VerticalAlignment="Top" Margin="0,1260,0,0"/>
+            <local:Hour x:Name="hr22" Width="1361" VerticalAlignment="Top" Margin="0,1320,0,0"/>
+            <local:Hour x:Name="hr23" Width="1361" VerticalAlignment="Top" Margin="0,1380,0,0"/>
+            <local:NowBar x:Name="nowBar" Width="1361" VerticalAlignment="Top" Margin="0,100,0,0"/>
+        </Canvas>
     </ScrollViewer>
 </UserControl>

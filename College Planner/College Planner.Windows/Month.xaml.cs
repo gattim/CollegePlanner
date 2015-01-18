@@ -22,7 +22,7 @@ namespace College_Planner {
         private Day[] days = new Day[37];
 
         public Month() {
-            this.InitializeComponent();
+            InitializeComponent();
 
             instantiateDaysArray();
             clear();

@@ -19,7 +19,7 @@ using Windows.UI.Xaml.Navigation;
 namespace College_Planner {
     public sealed partial class Day : UserControl {
         public Day() {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         public void select() {

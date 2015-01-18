@@ -19,10 +19,15 @@ namespace College_Planner {
     public sealed partial class DaySchedule : UserControl {
         public DaySchedule() {
             InitializeComponent();
-            instantiateTime();
+            instantiateTimeText();
+            setUpTimer();
         }
 
-        private void instantiateTime() {
+        private void timer_Tick(object sender, object e) {
+            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), 0, 0);
+        }
+
+        private void instantiateTimeText() {
             hr0.setTime("0000");
             hr1.setTime("0100");
             hr2.setTime("0200");
@@ -46,11 +51,15 @@ namespace College_Planner {
             hr20.setTime("2000");
             hr21.setTime("2100");
             hr22.setTime("2200");
-            hr23.setTime("2300");
-            /*
-            int secondsToday = (DateTime.Now.Hour * 3600) + (DateTime.Now.Minute * 60) + DateTime.Now.Second;
-            nowBar.Margin = new Thickness(0, secondsToday, 0, 0);
-            */
+            hr23.setTime("2300");        
+        }
+
+        private void setUpTimer() {
+            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), 0, 0);
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
     }
 }

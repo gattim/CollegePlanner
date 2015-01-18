@@ -6,33 +6,59 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
     <ScrollViewer BorderThickness="5,5,0,5" VerticalScrollBarVisibility="Hidden">
-            <StackPanel>
-                <local:Hour x:Name="hr0"/>
-                <local:Hour x:Name="hr1"/>
-                <local:Hour x:Name="hr2"/>
-                <local:Hour x:Name="hr3"/>
-                <local:Hour x:Name="hr4"/>
-                <local:Hour x:Name="hr5"/>
-                <local:Hour x:Name="hr6"/>
-                <local:Hour x:Name="hr7"/>
-                <local:Hour x:Name="hr8"/>
-                <local:Hour x:Name="hr9"/>
-                <local:Hour x:Name="hr10"/>
-                <local:Hour x:Name="hr11"/>
-                <local:Hour x:Name="hr12"/>
-                <local:Hour x:Name="hr13"/>
-                <local:Hour x:Name="hr14"/>
-                <local:Hour x:Name="hr15"/>
-                <local:Hour x:Name="hr16"/>
-                <local:Hour x:Name="hr17"/>
-                <local:Hour x:Name="hr18"/>
-                <local:Hour x:Name="hr19"/>
-                <local:Hour x:Name="hr20"/>
-                <local:Hour x:Name="hr21"/>
-                <local:Hour x:Name="hr22"/>
-                <local:Hour x:Name="hr23"/>
-        </StackPanel>
-        </ScrollViewer>
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+                <local:Hour x:Name="hr0" Grid.Row="0"/>
+                <local:Hour x:Name="hr1" Grid.Row="1"/>
+                <local:Hour x:Name="hr2" Grid.Row="2"/>
+                <local:Hour x:Name="hr3" Grid.Row="3"/>
+                <local:Hour x:Name="hr4" Grid.Row="4"/>
+                <local:Hour x:Name="hr5" Grid.Row="5"/>
+                <local:Hour x:Name="hr6" Grid.Row="6"/>
+                <local:Hour x:Name="hr7" Grid.Row="7"/>
+                <local:Hour x:Name="hr8" Grid.Row="8"/>
+                <local:Hour x:Name="hr9" Grid.Row="9"/>
+                <local:Hour x:Name="hr10" Grid.Row="10"/>
+                <local:Hour x:Name="hr11" Grid.Row="11"/>
+                <local:Hour x:Name="hr12" Grid.Row="12"/>
+                <local:Hour x:Name="hr13" Grid.Row="13"/>
+                <local:Hour x:Name="hr14" Grid.Row="14"/>
+                <local:Hour x:Name="hr15" Grid.Row="15"/>
+                <local:Hour x:Name="hr16" Grid.Row="16"/>
+                <local:Hour x:Name="hr17" Grid.Row="17"/>
+                <local:Hour x:Name="hr18" Grid.Row="18"/>
+                <local:Hour x:Name="hr19" Grid.Row="19"/>
+                <local:Hour x:Name="hr20" Grid.Row="20"/>
+                <local:Hour x:Name="hr21" Grid.Row="21"/>
+                <local:Hour x:Name="hr22" Grid.Row="22"/>
+                <local:Hour x:Name="hr23" Grid.Row="23"/>
+                <!--<local:NowBar x:Name="nowBar" VerticalAlignment="Top" Margin="0,100,0,0"/>-->
+            </Grid>
+    </ScrollViewer>
 </UserControl>

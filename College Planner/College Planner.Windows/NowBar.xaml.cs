@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -17,13 +16,9 @@ using Windows.UI.Xaml.Navigation;
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace College_Planner {
-    public sealed partial class Hour : UserControl {
-        public Hour() {
-            InitializeComponent();
-        }
-
-        public void setTime(string time) {
-            txtTime.Text = time;
+    public sealed partial class NowBar : UserControl {
+        public NowBar() {
+            this.InitializeComponent();
         }
     }
 }

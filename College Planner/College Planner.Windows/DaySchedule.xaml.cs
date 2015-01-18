@@ -18,7 +18,39 @@ using Windows.UI.Xaml.Navigation;
 namespace College_Planner {
     public sealed partial class DaySchedule : UserControl {
         public DaySchedule() {
-            this.InitializeComponent();
+            InitializeComponent();
+            instantiateTime();
+        }
+
+        private void instantiateTime() {
+            hr0.setTime("0000");
+            hr1.setTime("0100");
+            hr2.setTime("0200");
+            hr3.setTime("0300");
+            hr4.setTime("0400");
+            hr5.setTime("0500");
+            hr6.setTime("0600");
+            hr7.setTime("0700");
+            hr8.setTime("0800");
+            hr9.setTime("0900");
+            hr10.setTime("1000");
+            hr11.setTime("1100");
+            hr12.setTime("1200");
+            hr13.setTime("1300");
+            hr14.setTime("1400");
+            hr15.setTime("1500");
+            hr16.setTime("1600");
+            hr17.setTime("1700");
+            hr18.setTime("1800");
+            hr19.setTime("1900");
+            hr20.setTime("2000");
+            hr21.setTime("2100");
+            hr22.setTime("2200");
+            hr23.setTime("2300");
+            /*
+            int secondsToday = (DateTime.Now.Hour * 3600) + (DateTime.Now.Minute * 60) + DateTime.Now.Second;
+            nowBar.Margin = new Thickness(0, secondsToday, 0, 0);
+            */
         }
     }
 }

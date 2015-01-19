@@ -107,7 +107,7 @@ namespace College_Planner {
             }
 
             if (year == DateTime.Now.Year && month == DateTime.Now.Month) {
-                selectedDay = days[DateTime.Today.Day - 1];
+                selectedDay = days[DateTime.Today.Day + firstWeekDayOfMonth - 1];
                 selectedDay.select();
             }
         }

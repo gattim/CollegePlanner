@@ -21,7 +21,7 @@ namespace College_Planner {
             InitializeComponent();
             instantiateTimeText();
             setUpTimers();
-            scrollViewer.ChangeView(null, 600000, null);
+            
         }
 
         private void timer_Tick(object sender, object e) {
@@ -72,7 +72,7 @@ namespace College_Planner {
         private void nowBarFocusTimer_Tick(object sender, object e) {
             DispatcherTimer nowBarFocusTimer = sender as DispatcherTimer;
             nowBarFocusTimer.Interval = TimeSpan.FromMinutes(5);
-            scrollViewer.ChangeView(null, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), null, false);
+            scrollViewer.ChangeView(null, (DateTime.Now.Hour * 60), null, false);
         }
     }
 }

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <ScrollViewer x:Name="scrollViewer" BorderThickness="5,5,0,5" VerticalScrollBarVisibility="Hidden" Height="500">
+    <ScrollViewer x:Name="scrollViewer" BorderThickness="5,5,0,5" VerticalScrollBarVisibility="Hidden">
         <Canvas x:Name="canvas" Height="1440">
             <local:Hour x:Name="hr0" Width="1361" VerticalAlignment="Top" Margin="0,0,0,0"/>
             <local:Hour x:Name="hr1" Width="1361" VerticalAlignment="Top" Margin="0,60,0,0"/>

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     
-    <Grid Background="DarkBlue" Opacity=".5">
+    <Grid Background="DarkBlue" Opacity=".5" Margin="0,5,5,5">
         <CheckBox x:Name="cbxTask" Foreground="White"/>
     </Grid>
     

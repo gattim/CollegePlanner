@@ -23,6 +23,7 @@ namespace College_Planner {
 
         private void addTask(object sender, RoutedEventArgs e) {
             taskList.Children.Add(new Task("Test Task"));
+            
         }
 
         private void addTaskPressed(object sender, PointerRoutedEventArgs e) {

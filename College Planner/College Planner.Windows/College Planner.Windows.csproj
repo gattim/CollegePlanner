@@ -107,6 +107,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coursee.xaml.cs">
+      <DependentUpon>Coursee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Day.xaml.cs">
       <DependentUpon>Day.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,7 @@
     <None Include="College Planner.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AddTaskBackground.jpg" />
     <Content Include="Assets\CalendarBackground.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
@@ -147,6 +151,10 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Coursee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Day.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

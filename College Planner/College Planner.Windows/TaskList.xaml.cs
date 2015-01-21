@@ -22,8 +22,8 @@ namespace College_Planner {
         }
 
         private void addTask(object sender, RoutedEventArgs e) {
-            taskList.Children.Add(new Task("Test Task"));
-            
+            popupAddTask.IsOpen = true;
+
         }
 
         private void addTaskPressed(object sender, PointerRoutedEventArgs e) {
@@ -32,6 +32,17 @@ namespace College_Planner {
 
         private void addTaskReleased(object sender, PointerRoutedEventArgs e) {
 
+        }
+
+        private void btnSubmitTask_Click(object sender, RoutedEventArgs e) {
+            taskList.Children.Add(new Task(txtName.Text));
+            txtName.Text = "";
+            popupAddTask.IsOpen = false;
+        }
+
+        private void btnCancelAddTask_Click(object sender, RoutedEventArgs e) {
+            txtName.Text = "";
+            popupAddTask.IsOpen = false;
         }
     }
 

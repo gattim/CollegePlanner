@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -98,6 +99,7 @@ namespace College_Planner {
                     selectedDay.deselect();
                     selectedDay = null;
                 }
+                day.dismake();
                 day.deactivate();
                 day.PointerPressed -= Day_PointerPressed;
             }
@@ -117,6 +119,7 @@ namespace College_Planner {
             if (year == DateTime.Now.Year && month == DateTime.Now.Month) {
                 selectedDay = days[DateTime.Today.Day + firstWeekDayOfMonth - 1];
                 selectedDay.select();
+                selectedDay.makeToday();
             }
         }
 

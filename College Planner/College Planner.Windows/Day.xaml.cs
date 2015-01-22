@@ -18,6 +18,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace College_Planner {
     public sealed partial class Day : UserControl {
+
+        private bool isToday = false;
+
         public Day() {
             InitializeComponent();
         }
@@ -33,13 +36,23 @@ namespace College_Planner {
         public void activate(int dayNum) {
             txtDayOfMonth.Foreground = new SolidColorBrush(Colors.DarkBlue);
             rectBackground.Fill = new SolidColorBrush(Colors.WhiteSmoke);
-            rectBackground.Stroke = new SolidColorBrush(Colors.DarkBlue);
+            rectBackground.Stroke = (!isToday) ? new SolidColorBrush(Colors.DarkBlue) : rectBackground.Stroke;
             txtDayOfMonth.Text = dayNum.ToString();
         }
 
         public void deactivate() {
             txtDayOfMonth.Foreground = null;
             rectBackground.Fill = null;
+            rectBackground.Stroke = (!isToday) ? null : rectBackground.Stroke;
+        }
+
+        public void makeToday() {
+            isToday = true;
+            rectBackground.Stroke = new SolidColorBrush(Colors.Red);
+        }
+
+        public void dismake() {
+            isToday = false;
             rectBackground.Stroke = null;
         }
     }

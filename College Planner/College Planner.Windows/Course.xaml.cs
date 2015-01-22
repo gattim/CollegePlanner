@@ -16,9 +16,10 @@ using Windows.UI.Xaml.Navigation;
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace College_Planner {
-    public sealed partial class Coursee : UserControl {
-        public Coursee() {
+    public sealed partial class Course : UserControl {
+        public Course(String name) {
             this.InitializeComponent();
+            txtBlkCourseName.Text = name;
         }
     }
 }

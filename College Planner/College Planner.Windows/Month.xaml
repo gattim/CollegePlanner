@@ -28,7 +28,10 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Center" VerticalAlignment="Center" DayVisible="False" Foreground="DarkBlue" DateChanged="dateChanged" Grid.Row="0" Grid.ColumnSpan="7" Opacity="0.75"/>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="7">
+            <DatePicker x:Name="datePicker" HorizontalAlignment="Center" DayVisible="False" Foreground="DarkBlue" DateChanged="dateChanged" Opacity="0.75"/>
+            <ToggleSwitch x:Name="tsMonthToWeek" HorizontalAlignment="Center" OnContent="Week" OffContent="Month" Toggled="changeView"/>
+        </StackPanel>
         <TextBlock x:Name="txtSun" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Text="Sunday" FontWeight="ExtraBold" FontSize="20" FontStretch="UltraExpanded">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.15,0">

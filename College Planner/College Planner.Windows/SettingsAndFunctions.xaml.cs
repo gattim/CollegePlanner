@@ -17,7 +17,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace College_Planner {
     public sealed partial class SettingsAndFunctions : UserControl {
-        private bool monthView = true;
         public event Action<Course> AddCourse;
 
         public SettingsAndFunctions() {
@@ -27,17 +26,6 @@ namespace College_Planner {
 
         private void btnAddCourse_Click(object sender, RoutedEventArgs e) {
             AddCourse(new Course("Test"));
-        }
-
-        private void changeView(object sender, RoutedEventArgs e) {
-            ToggleSwitch ts = sender as ToggleSwitch;
-            if (monthView) {
-
-                monthView = false;
-            } else {
-
-                monthView = true;
-            }
         }
     }
 }

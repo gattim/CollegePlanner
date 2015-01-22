@@ -17,9 +17,23 @@ using Windows.UI.Xaml.Navigation;
 
 namespace College_Planner {
     public sealed partial class Course : UserControl {
-        public Course(String name) {
+
+        private string courseCode;
+        private string courseName;
+        private Professor professor;
+        private string building;
+        private string roomNumber;
+        private Grades grades;
+        private TimeSpan classTime;
+
+        public Course(string name) {
             this.InitializeComponent();
+
+            courseName = name;
             txtBlkCourseName.Text = name;
         }
     }
+
+    public class Professor{}
+    public class Grades { }
 }

@@ -23,7 +23,6 @@ namespace College_Planner {
 
         public Month() {
             InitializeComponent();
-
             instantiateDaysArray();
             clear();
             populate(datePicker.Date.Year, datePicker.Date.Month);     
@@ -42,6 +41,15 @@ namespace College_Planner {
             DatePicker day = sender as DatePicker;
             clear();
             populate(day.Date.Year, day.Date.Month);
+        }
+
+        private void changeView(object sender, RoutedEventArgs e) {
+            ToggleSwitch ts = sender as ToggleSwitch;
+            if (ts.IsOn) {
+                clear();
+            } else {
+                populate(datePicker.Date.Year, datePicker.Date.Month);
+            }
         }
 
         private void instantiateDaysArray() {

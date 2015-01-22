@@ -19,6 +19,5 @@
         </Grid.RowDefinitions>
         <Button x:Name="btnAddCourse" Content="Add Course" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnAddCourse_Click"/>
         <ComboBox x:Name="cbxSemester" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ToggleSwitch x:Name="tsWeekMonth" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" OnContent="Week" OffContent="Month" Toggled="changeView"/>
     </Grid>
 </UserControl>

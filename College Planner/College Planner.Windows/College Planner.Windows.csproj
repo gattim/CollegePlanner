@@ -110,6 +110,9 @@
     <Compile Include="Course.xaml.cs">
       <DependentUpon>Course.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CourseAdder.xaml.cs">
+      <DependentUpon>CourseAdder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CourseList.xaml.cs">
       <DependentUpon>CourseList.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,7 @@
     <None Include="College Planner.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AddCourseBackground.jpg" />
     <Content Include="Assets\AddTaskBackground.jpg" />
     <Content Include="Assets\CalendarBackground.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
@@ -158,6 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Course.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CourseAdder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

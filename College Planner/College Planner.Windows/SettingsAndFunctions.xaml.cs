@@ -25,7 +25,7 @@ namespace College_Planner {
         }
 
         private void btnAddCourse_Click(object sender, RoutedEventArgs e) {
-            AddCourse(new Course("Test"));
+            courseAdder.pop();
         }
     }
 }

@@ -134,6 +134,7 @@
     <Compile Include="NowBar.xaml.cs">
       <DependentUpon>NowBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsAndFunctions.xaml.cs">
       <DependentUpon>SettingsAndFunctions.xaml</DependentUpon>

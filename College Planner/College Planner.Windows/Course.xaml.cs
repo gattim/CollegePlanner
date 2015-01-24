@@ -18,17 +18,16 @@ using Windows.UI.Xaml.Navigation;
 namespace College_Planner {
     public sealed partial class Course : UserControl {
 
-        /*
-        private string courseCode;
+        private string courseID;
         private string courseName;
         private Professor professor;
         private string building;
         private string roomNumber;
         private Grades grades;
         private TimeSpan classTime;
-        */
+        
 
-        public Course(string name) {
+        public Course(string id, string name, Professor professor) {
             this.InitializeComponent();
 
            // courseName = name;

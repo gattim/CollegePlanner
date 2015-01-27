@@ -76,6 +76,9 @@
             </StackPanel>
             <Popup x:Name="popBuilding">
                 <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/AddBuildingBackground.jpg"/>
+                    </Grid.Background>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>

@@ -37,7 +37,10 @@ namespace College_Planner {
         }
 
         private void submit_Click(object sender, RoutedEventArgs e) {
-            AddCourse(new Course(txtID.Text, txtName.Text, cbxBuilding.SelectedItem.ToString(), txtRoom.Text));
+            Course course = new Course(txtID.Text, txtName.Text, cbxBuilding.SelectedItem.ToString(), txtRoom.Text);
+            course.professor = cbxProfessor.SelectedItem as Professor;
+            AddCourse(course);
+
             drop();
         }
 
@@ -61,19 +64,36 @@ namespace College_Planner {
         }
 
         private void btnAddBuilding_Click(object sender, RoutedEventArgs e) {
+            popProfessor.IsOpen = false;
             popBuilding.IsOpen = true;
         }
 
         private void btnAddProfessor_Click(object sender, RoutedEventArgs e) {
-
+            popBuilding.IsOpen = false;
+            popProfessor.IsOpen = true;
         }
 
         private void BuildingAddSubmit_Click(object sender, RoutedEventArgs e) {
             cbxBuilding.Items.Add(txtBuilding.Text);
+            cbxBuilding.SelectedItem = txtBuilding.Text;
+            txtBuilding.Text = "";
+            popBuilding.IsOpen = false;
         }
 
         private void BuildingAddCancel_Click(object sender, RoutedEventArgs e) {
             popBuilding.IsOpen = false;
+        }
+
+        private void ProfAddSubmit_Click(object sender, RoutedEventArgs e) {
+            Professor prof = new Professor(txtProf.Text, cbxProfBuilding.SelectedItem.ToString(), txtProfRoom.Text, txtPhone.Text, txtEmail.Text);
+            cbxProfessor.Items.Add(prof);
+            cbxProfessor.SelectedItem = txtProf.Text;
+            txtProf.Text = "";
+            popProfessor.IsOpen = false;
+        }
+
+        private void ProfAddCancel_Click(object sender, RoutedEventArgs e) {
+            popProfessor.IsOpen = false;
         }
     }
 }

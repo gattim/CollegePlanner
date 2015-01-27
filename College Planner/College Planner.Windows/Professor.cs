@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace College_Planner {
-    class Professor {
+    public class Professor {
         public string name { get; set; }
         public string officeBuilding { get; set; }
         public string officeRoom { get; set; }

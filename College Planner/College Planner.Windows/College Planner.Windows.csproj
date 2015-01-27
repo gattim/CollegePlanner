@@ -156,6 +156,7 @@
   <ItemGroup>
     <Content Include="Assets\AddBuildingBackground.jpg" />
     <Content Include="Assets\AddCourseBackground.jpg" />
+    <Content Include="Assets\AddProfessorBackground.jpg" />
     <Content Include="Assets\AddTaskBackground.jpg" />
     <Content Include="Assets\CalendarBackground.jpg" />
     <Content Include="Assets\Logo\Logo.scale-100.png" />

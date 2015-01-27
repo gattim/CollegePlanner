@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace College_Planner {
     class Professor {
-        private string name;
-        private string officeBuilding;
-        private string officeRoom;
-        private int phone;
-        private string email;
+        public string name { get; set; }
+        public string officeBuilding { get; set; }
+        public string officeRoom { get; set; }
+        public string phone { get; set; }
+        public string email { get; set; }
 
-        public Professor() {
-
+        public Professor(string name, string officeBuilding, string officeRoom, string phone, string email) {
+            this.name = name;
+            this.officeBuilding = officeBuilding;
+            this.officeRoom = officeRoom;
+            this.phone = phone;
+            this.email = email;
         }
+
     }
 }

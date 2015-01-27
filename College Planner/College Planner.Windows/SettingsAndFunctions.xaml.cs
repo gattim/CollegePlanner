@@ -17,7 +17,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace College_Planner {
     public sealed partial class SettingsAndFunctions : UserControl {
-        public event Action<Course> AddCourse;
 
         public SettingsAndFunctions() {
             this.InitializeComponent();
@@ -26,6 +25,10 @@ namespace College_Planner {
 
         private void btnAddCourse_Click(object sender, RoutedEventArgs e) {
             courseAdder.pop();
+        }
+
+        public CourseAdder getCourseAdder() {
+            return courseAdder;
         }
     }
 }

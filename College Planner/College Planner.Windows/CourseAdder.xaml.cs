@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Navigation;
 
 namespace College_Planner {
     public sealed partial class CourseAdder : UserControl {
+        public event Action<Course> AddCourse;
+
         public CourseAdder() {
             this.InitializeComponent();
         }
@@ -35,7 +37,8 @@ namespace College_Planner {
         }
 
         private void submit_Click(object sender, RoutedEventArgs e) {
-
+            AddCourse(new Course(txtID.Text, txtName.Text, cbxBuilding.SelectedItem.ToString(), txtRoom.Text));
+            drop();
         }
 
         private void addGrades_Click(object sender, RoutedEventArgs e) {
@@ -58,11 +61,19 @@ namespace College_Planner {
         }
 
         private void btnAddBuilding_Click(object sender, RoutedEventArgs e) {
-
+            popBuilding.IsOpen = true;
         }
 
         private void btnAddProfessor_Click(object sender, RoutedEventArgs e) {
 
+        }
+
+        private void BuildingAddSubmit_Click(object sender, RoutedEventArgs e) {
+            cbxBuilding.Items.Add(txtBuilding.Text);
+        }
+
+        private void BuildingAddCancel_Click(object sender, RoutedEventArgs e) {
+            popBuilding.IsOpen = false;
         }
     }
 }

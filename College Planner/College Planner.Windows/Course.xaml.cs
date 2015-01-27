@@ -27,11 +27,13 @@ namespace College_Planner {
         private TimeSpan classTime;
         
 
-        public Course(string id, string name, Professor professor) {
+        public Course(string id, string name, string building, string roomNum) {
             this.InitializeComponent();
-
-           // courseName = name;
+            courseID = id;
+            courseName = name;
             txtBlkCourseName.Text = name;
+            this.building = building;
+            roomNumber = roomNum;
         }
     }
 

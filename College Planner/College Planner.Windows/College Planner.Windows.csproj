@@ -122,6 +122,7 @@
     <Compile Include="DaySchedule.xaml.cs">
       <DependentUpon>DaySchedule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Grades.cs" />
     <Compile Include="Hour.xaml.cs">
       <DependentUpon>Hour.xaml</DependentUpon>
     </Compile>

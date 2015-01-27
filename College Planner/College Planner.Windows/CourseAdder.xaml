@@ -74,6 +74,22 @@
                     </Button.Template>
                 </Button>
             </StackPanel>
+            <Popup x:Name="popBuilding">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Building Name:"/>
+                    <Button Grid.Column="0" Grid.Row="1" Content="Submit" Click="BuildingAddSubmit_Click"/>
+                    <TextBox x:Name="txtBuilding" Grid.Column="1" Grid.Row="0"/>
+                    <Button Grid.Column="1" Grid.Row="1" Content="Cancel" Click="BuildingAddCancel_Click"/>
+                </Grid>
+            </Popup>
             <TextBox x:Name="txtRoom" Grid.Column="1" Grid.Row="4" Opacity=".75" BorderBrush="Black"/>
             <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal">
                 <ToggleButton x:Name="tbMon" Content="M"/>

@@ -23,7 +23,7 @@ namespace College_Planner
         public MainPage()
         {
             InitializeComponent();
-            settingsAndFunctions.AddCourse += AddCourseToCourseList;
+            settingsAndFunctions.getCourseAdder().AddCourse += AddCourseToCourseList;
         }
 
         private void AddCourseToCourseList(Course course) {

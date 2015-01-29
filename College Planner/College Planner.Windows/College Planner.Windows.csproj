@@ -113,7 +113,14 @@
     <Compile Include="CourseAdder.xaml.cs">
       <DependentUpon>CourseAdder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CourseList.xaml.cs">
+    <Compile Include="Database.cs" />
+    <Compile Include="LabAdder.xaml.cs">
+      <DependentUpon>LabAdder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorAdder.xaml.cs">
+      <DependentUpon>ProfessorAdder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\CourseList.xaml.cs">
       <DependentUpon>CourseList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Day.xaml.cs">
@@ -143,7 +150,7 @@
     <Compile Include="Task.xaml.cs">
       <DependentUpon>Task.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskList.xaml.cs">
+    <Compile Include="Repositories\TaskList.xaml.cs">
       <DependentUpon>TaskList.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -156,6 +163,7 @@
   <ItemGroup>
     <Content Include="Assets\AddBuildingBackground.jpg" />
     <Content Include="Assets\AddCourseBackground.jpg" />
+    <Content Include="Assets\AddLabBackground.jpg" />
     <Content Include="Assets\AddProfessorBackground.jpg" />
     <Content Include="Assets\AddTaskBackground.jpg" />
     <Content Include="Assets\CalendarBackground.jpg" />
@@ -189,7 +197,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CourseList.xaml">
+    <Page Include="LabAdder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfessorAdder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Repositories\CourseList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,7 +241,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaskList.xaml">
+    <Page Include="Repositories\TaskList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

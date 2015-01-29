@@ -28,6 +28,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Text="Course ID:"/>
+                
                 <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
                     <TextBox x:Name="txtID" Opacity=".75" Width="200" BorderBrush="Black"/>
                     <TextBlock Text="Credits:"/>
@@ -64,28 +65,7 @@
                     </Button>
                 </StackPanel>
                 
-                <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-                    <ComboBox x:Name="cbxBuilding" Opacity=".75" BorderBrush="Black" Width="300">
-                        <ComboBoxItem>Unknown</ComboBoxItem>
-                    </ComboBox>
-                    <Button x:Name="btnAddBuilding" Height="35" Width="35" VerticalAlignment="Center" Click="btnAddBuilding_Click">
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Canvas>
-                                    <Ellipse x:Name="btnAddOutline" Stroke="WhiteSmoke" StrokeThickness="2" Opacity=".5" Height="35" Width="35"/>
-                                    <Ellipse x:Name="btnAddFill" Fill="Black" Height="35" Width="35" Opacity="0"/>
-                                    <Rectangle x:Name="btnAddVertCross" Stroke="WhiteSmoke" Fill="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,4,0,0" Height="27" Width="5" Opacity=".5"/>
-                                    <Rectangle x:Name="btnAddHorCross" Stroke="WhiteSmoke" Fill="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,4,0,0" Height="27" Width="5" Opacity=".5" RenderTransformOrigin="0.5,0.5">
-                                        <Rectangle.RenderTransform>
-                                            <CompositeTransform Rotation="90"/>
-                                        </Rectangle.RenderTransform>
-                                    </Rectangle>
-                                </Canvas>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </StackPanel>
-
+                <TextBox x:Name="txtBuilding" Grid.Column="1" Grid.Row="3" Opacity=".75" BorderBrush="Black"/>
                 <TextBox x:Name="txtRoom" Grid.Column="1" Grid.Row="4" Opacity=".75" BorderBrush="Black"/>
                 <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal">
                     <ToggleButton x:Name="tbMon" Content="M"/>
@@ -126,57 +106,8 @@
                 </Grid>
             </Grid>
             
-            <Popup x:Name="popBuilding" Margin="400,100,0,0">
-                <Grid>
-                    <Grid.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="Assets/AddBuildingBackground.jpg" Opacity=".75"/>
-                    </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Building Name:"/>
-                    <Button Grid.Column="0" Grid.Row="1" Content="Submit" Click="BuildingAddSubmit_Click"/>
-                    <TextBox x:Name="txtBuilding" Grid.Column="1" Grid.Row="0" Opacity=".75"/>
-                    <Button Grid.Column="1" Grid.Row="1" Content="Cancel" Click="BuildingAddCancel_Click"/>
-                </Grid>
-            </Popup>
-            
-            <Popup x:Name="popProfessor" Margin="400,75,0,0">
-                <Grid>
-                    <Grid.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="Assets/AddProfessorBackground.jpg" Opacity=".75"/>
-                    </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Name:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Office Building:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Office Room:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="3" Text="Phone Number:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="4" Text="E-mail:"/>
-                    <Button Grid.Column="0" Grid.Row="5" Content="Submit" Click="ProfAddSubmit_Click"/>
-                    <TextBox x:Name="txtProf" Grid.Column="1" Grid.Row="0" BorderBrush="Black" Opacity=".75"/>
-                    <ComboBox x:Name="cbxProfBuilding" Grid.Column="1" Grid.Row="1" BorderBrush="Black" Opacity=".75"/>
-                    <TextBox x:Name="txtProfRoom" Grid.Column="1" Grid.Row="2" BorderBrush="Black" Opacity=".75"/>
-                    <TextBox x:Name="txtPhone" Grid.Column="1" Grid.Row="3" BorderBrush="Black" Opacity=".75"/>
-                    <TextBox x:Name="txtEmail" Grid.Column="1" Grid.Row="4" BorderBrush="Black" Opacity=".75"/>
-                    <Button Grid.Column="1" Grid.Row="5" Content="Cancel" Click="ProfAddCancel_Click"/>
-                </Grid>
-            </Popup>
+            <local:ProfessorAdder x:Name="popProfessor" Margin="450,75,0,0"/>
+            <local:LabAdder x:Name="popLab" Margin="0,400,0,0"/>
             
         </Canvas>
     </Popup>

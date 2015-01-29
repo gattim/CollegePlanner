@@ -18,16 +18,27 @@ using Windows.UI.Xaml.Shapes;
 
 namespace College_Planner
 {
+    
+
     public sealed partial class MainPage : Page
     {
+
+        private Database database = new Database();
+
         public MainPage()
         {
             InitializeComponent();
-            settingsAndFunctions.getCourseAdder().AddCourse += AddCourseToCourseList;
+            settingsAndFunctions.getCourseAdder().AddCourse += AddCourseToDatabase;
+            settingsAndFunctions.getCourseAdder().getProfessorAdder().AddProfessor += AddProfessorToDatabase;
         }
 
-        private void AddCourseToCourseList(Course course) {
+        private void AddCourseToDatabase(Course course) {
+            database.addCourse(course);
             courseList.addCourse(course);
+        }
+
+        private void AddProfessorToDatabase(Professor professor) {
+            database.addProfessor(professor);
         }
     }
 }

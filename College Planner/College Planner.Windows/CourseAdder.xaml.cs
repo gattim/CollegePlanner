@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,6 +22,7 @@ namespace College_Planner {
 
         public CourseAdder() {
             InitializeComponent();
+            popProfessor.AddProfessor += addProfessorToCbx;
         }
 
         public void pop() {
@@ -43,52 +45,43 @@ namespace College_Planner {
             tbFri.IsChecked = false;
         }
 
-        private void btnAddBuilding_Click(object sender, RoutedEventArgs e) {
-            popProfessor.IsOpen = false;
-            popBuilding.IsOpen = true;
+        public ProfessorAdder getProfessorAdder() { return popProfessor; }
+
+        private void addProfessorToCbx(Professor professor) {
+            cbxProfessor.Items.Add(professor.name);
+            cbxProfessor.SelectedValue = professor.name;
         }
 
         private void btnAddProfessor_Click(object sender, RoutedEventArgs e) {
-            popBuilding.IsOpen = false;
-            popProfessor.IsOpen = true;
-        }
-
-        private void BuildingAddSubmit_Click(object sender, RoutedEventArgs e) {
-            cbxBuilding.Items.Add(txtBuilding.Text);
-            cbxBuilding.SelectedItem = txtBuilding.Text;
-            txtBuilding.Text = "";
-            popBuilding.IsOpen = false;
-        }
-
-        private void BuildingAddCancel_Click(object sender, RoutedEventArgs e) {
-            popBuilding.IsOpen = false;
-        }
-
-        private void ProfAddSubmit_Click(object sender, RoutedEventArgs e) {
-            Professor prof = new Professor(txtProf.Text, cbxProfBuilding.SelectedItem.ToString(), txtProfRoom.Text, txtPhone.Text, txtEmail.Text);
-            cbxProfessor.Items.Add(prof);
-            cbxProfessor.SelectedItem = txtProf.Text;
-            txtProf.Text = "";
-            popProfessor.IsOpen = false;
-        }
-
-        private void ProfAddCancel_Click(object sender, RoutedEventArgs e) {
-            popProfessor.IsOpen = false;
+            popProfessor.pop();
         }
 
         private void addLab_Click(object sender, RoutedEventArgs e) {
-
-        }
-
-        private void submit_Click(object sender, RoutedEventArgs e) {
-            Course course = new Course(txtID.Text, txtName.Text, Int32.Parse(txtCredits.Text), cbxBuilding.SelectedItem.ToString(), txtRoom.Text);
-            course.professor = cbxProfessor.SelectedItem as Professor;
-            AddCourse(course);
-            drop();
+            popLab.pop();
         }
 
         private void addGrades_Click(object sender, RoutedEventArgs e) {
 
+        }
+
+        private void submit_Click(object sender, RoutedEventArgs e) {
+            int credits = 0;
+            bool flagReturn = (txtID.Text == "" || txtName.Text == "") ? true :  false;
+            txtID.Background = (txtID.Text == "") ? new SolidColorBrush(Colors.Yellow) : new SolidColorBrush(Colors.WhiteSmoke);
+            txtName.Background = (txtName.Text == "") ? new SolidColorBrush(Colors.Yellow) : new SolidColorBrush(Colors.WhiteSmoke);
+            try {
+                credits = Int32.Parse(txtCredits.Text);
+                txtCredits.Background = new SolidColorBrush(Colors.WhiteSmoke);
+            } catch {
+                txtCredits.Background = new SolidColorBrush(Colors.Yellow);
+                txtCredits.Text = "";
+                flagReturn = true;
+            }
+            if (flagReturn) return;
+            Course course = new Course(txtID.Text, txtName.Text, credits, txtBuilding.Text, txtRoom.Text);
+            course.professor = cbxProfessor.SelectedItem as Professor;      
+            AddCourse(course);
+            drop();
         }
 
         private void cancel_Click(object sender, RoutedEventArgs e) {

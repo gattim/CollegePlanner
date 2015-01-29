@@ -20,7 +20,7 @@ namespace College_Planner {
         public event Action<Course> AddCourse;
 
         public CourseAdder() {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         public void pop() {
@@ -30,26 +30,6 @@ namespace College_Planner {
         public void drop() {
             clear();
             popup.IsOpen = false;
-        }
-
-        private void addLab_Click(object sender, RoutedEventArgs e) {
-
-        }
-
-        private void submit_Click(object sender, RoutedEventArgs e) {
-            Course course = new Course(txtID.Text, txtName.Text, cbxBuilding.SelectedItem.ToString(), txtRoom.Text);
-            course.professor = cbxProfessor.SelectedItem as Professor;
-            AddCourse(course);
-
-            drop();
-        }
-
-        private void addGrades_Click(object sender, RoutedEventArgs e) {
-
-        }
-
-        private void cancel_Click(object sender, RoutedEventArgs e) {
-            drop();
         }
 
         private void clear() {
@@ -94,6 +74,25 @@ namespace College_Planner {
 
         private void ProfAddCancel_Click(object sender, RoutedEventArgs e) {
             popProfessor.IsOpen = false;
+        }
+
+        private void addLab_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void submit_Click(object sender, RoutedEventArgs e) {
+            Course course = new Course(txtID.Text, txtName.Text, Int32.Parse(txtCredits.Text), cbxBuilding.SelectedItem.ToString(), txtRoom.Text);
+            course.professor = cbxProfessor.SelectedItem as Professor;
+            AddCourse(course);
+            drop();
+        }
+
+        private void addGrades_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void cancel_Click(object sender, RoutedEventArgs e) {
+            drop();
         }
     }
 }

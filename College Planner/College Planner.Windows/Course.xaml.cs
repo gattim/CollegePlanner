@@ -33,7 +33,6 @@ namespace College_Planner {
             courseID = id;
             courseName = name;
             this.credits = credits;
-            professor = prof;
             txtBlkCourseName.Text = name;
             this.building = building;
             roomNumber = roomNum;

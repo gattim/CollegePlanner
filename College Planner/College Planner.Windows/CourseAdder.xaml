@@ -27,18 +27,25 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Text="Course ID:"/>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Course ID:"/>
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <TextBox x:Name="txtID" Opacity=".75" Width="200" BorderBrush="Black"/>
+                    <TextBlock Text="Credits:"/>
+                    <TextBox x:Name="txtCredits" Opacity=".75" BorderBrush="Black"/>
+                </StackPanel>
+                
                 <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Text="Course Name:"/>
                 <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Text="Professor:"/>
                 <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Text="Building:"/>
                 <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Text="Room Number:"/>
                 <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Text="Days:"/>
                 <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Text="Time Slot:"/>
-
-                <TextBox x:Name="txtID" Grid.Column="1" Grid.Row="0" Opacity=".75" BorderBrush="Black"/>
                 <TextBox x:Name="txtName" Grid.Column="1" Grid.Row="1" Opacity=".75" BorderBrush="Black"/>
+                
                 <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-                    <ComboBox x:Name="cbxProfessor" Opacity=".75" BorderBrush="Black" Width="300"/>
+                    <ComboBox x:Name="cbxProfessor" SelectedIndex="0" Opacity=".75" BorderBrush="Black" Width="300">
+                        <ComboBoxItem>Unknown</ComboBoxItem>
+                    </ComboBox>
                     <Button x:Name="btnAddProfessor" Height="35" Width="35" VerticalAlignment="Center" Click="btnAddProfessor_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -56,8 +63,11 @@
                         </Button.Template>
                     </Button>
                 </StackPanel>
+                
                 <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-                    <ComboBox x:Name="cbxBuilding" Opacity=".75" BorderBrush="Black" Width="300"/>
+                    <ComboBox x:Name="cbxBuilding" Opacity=".75" BorderBrush="Black" Width="300">
+                        <ComboBoxItem>Unknown</ComboBoxItem>
+                    </ComboBox>
                     <Button x:Name="btnAddBuilding" Height="35" Width="35" VerticalAlignment="Center" Click="btnAddBuilding_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -84,6 +94,7 @@
                     <ToggleButton x:Name="tbThurs" Content="R"/>
                     <ToggleButton x:Name="tbFri" Content="F"/>
                 </StackPanel>
+                
                 <Grid Grid.Column="1" Grid.Row="6">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -114,6 +125,7 @@
                     <Button Grid.Column="1" Grid.Row="1" Width="130" HorizontalAlignment="Center" Content="Cancel" Click="cancel_Click"/>
                 </Grid>
             </Grid>
+            
             <Popup x:Name="popBuilding" Margin="400,100,0,0">
                 <Grid>
                     <Grid.Background>
@@ -133,6 +145,7 @@
                     <Button Grid.Column="1" Grid.Row="1" Content="Cancel" Click="BuildingAddCancel_Click"/>
                 </Grid>
             </Popup>
+            
             <Popup x:Name="popProfessor" Margin="400,75,0,0">
                 <Grid>
                     <Grid.Background>
@@ -164,6 +177,7 @@
                     <Button Grid.Column="1" Grid.Row="5" Content="Cancel" Click="ProfAddCancel_Click"/>
                 </Grid>
             </Popup>
+            
         </Canvas>
     </Popup>
 </UserControl>

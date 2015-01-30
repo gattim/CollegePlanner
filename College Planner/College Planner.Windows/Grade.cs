@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace College_Planner {
 
-    class Grade {
+    public class Grade {
 
         public string type { get; }
         public double percent { get; }

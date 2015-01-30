@@ -114,6 +114,10 @@
       <DependentUpon>CourseAdder.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="Grade.cs" />
+    <Compile Include="GradesAdder.xaml.cs">
+      <DependentUpon>GradesAdder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LabAdder.xaml.cs">
       <DependentUpon>LabAdder.xaml</DependentUpon>
     </Compile>
@@ -194,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CourseAdder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GradesAdder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

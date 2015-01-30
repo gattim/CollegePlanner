@@ -19,5 +19,23 @@ namespace College_Planner {
         public List<Grade> getGrades() {
             return grades;
         }
+
+        public Grade removeGrade(string grade) {
+            foreach (Grade g in grades) {
+                if (g.type == grade) {
+                    grades.Remove(g);
+                    return g;
+                }
+            }
+            return null;
+        }
+
+        public int size() {
+            int size = 0;
+            foreach (Grade grade in grades) {
+                size++;
+            }
+            return size;
+        }
     }
 }

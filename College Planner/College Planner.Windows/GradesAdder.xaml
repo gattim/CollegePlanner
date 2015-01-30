@@ -8,18 +8,22 @@
     mc:Ignorable="d">
     <Popup x:Name="popup">
         <StackPanel>
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/AddGradesBackground.jpg"/>
+            </StackPanel.Background>
+            <TextBlock x:Name="txtWarning" Foreground="Red" Visibility="Collapsed" Text="Grades add up to more than 100%"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="txtType" Header="Type" Width="250"/>
-                <TextBox x:Name="txtPercent" Header="%" Width="50"/>
+                <TextBox x:Name="txtType" Header="Type" Width="200" BorderBrush="DarkBlue" Margin="10,0,0,0" Opacity=".75"/>
+                <TextBox x:Name="txtPercent" Header="%" Width="50" BorderBrush="DarkBlue" Margin="10,0,0,0" Opacity=".75"/>
             </StackPanel>
-            <ListBox x:Name="lbType" Width="300" Height="300"/>
+            <ListBox x:Name="lbType" Width="300" Height="200" BorderBrush="DarkBlue" Opacity=".75"/>
             <StackPanel Orientation="Horizontal">
-                <Button Content="Add" Click="Add_Click"/>
-                <Button Content="Remove" Click="Remove_Click"/>
+                <Button Content="Add" Click="Add_Click" Width="150"/>
+                <Button Content="Remove" Click="Remove_Click" Width="150"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button Content="Submit" Click="Submit_Click"/>
-                <Button Content="Cancel" Click="Cancel_Click"/>
+                <Button Content="Submit" Click="Submit_Click" Width="150"/>
+                <Button Content="Cancel" Click="Cancel_Click" Width="150"/>
             </StackPanel>
         </StackPanel>
     </Popup>

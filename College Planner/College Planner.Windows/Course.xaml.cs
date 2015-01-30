@@ -25,6 +25,7 @@ namespace College_Planner {
         public string building { get; set; }
         public string roomNumber { get; set; }
         public Grades grades { get; set; }
+
         public string[,] week = new string[5,2];
 
 

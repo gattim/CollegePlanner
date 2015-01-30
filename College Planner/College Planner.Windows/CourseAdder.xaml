@@ -108,6 +108,7 @@
             
             <local:ProfessorAdder x:Name="popProfessor" Margin="450,75,0,0"/>
             <local:LabAdder x:Name="popLab" Margin="0,400,0,0"/>
+            <local:GradesAdder x:Name="popGrades" Margin="450,400,0,0"/>
             
         </Canvas>
     </Popup>

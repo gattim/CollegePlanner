@@ -19,10 +19,12 @@ using Windows.UI.Xaml.Navigation;
 namespace College_Planner {
     public sealed partial class CourseAdder : UserControl {
         public event Action<Course> AddCourse;
+        private Grades grades;
 
         public CourseAdder() {
             InitializeComponent();
             popProfessor.AddProfessor += addProfessorToCbx;
+            popGrades.AddGrades += PopGrades_AddGrades;
         }
 
         public void pop() {
@@ -43,6 +45,7 @@ namespace College_Planner {
             tbWed.IsChecked = false;
             tbThurs.IsChecked = false;
             tbFri.IsChecked = false;
+            grades = null;
         }
 
         public ProfessorAdder getProfessorAdder() { return popProfessor; }
@@ -50,6 +53,9 @@ namespace College_Planner {
         private void addProfessorToCbx(Professor professor) {
             cbxProfessor.Items.Add(professor.name);
             cbxProfessor.SelectedValue = professor.name;
+        }
+        private void PopGrades_AddGrades(Grades g) {
+            grades = g;
         }
 
         private void btnAddProfessor_Click(object sender, RoutedEventArgs e) {
@@ -61,7 +67,7 @@ namespace College_Planner {
         }
 
         private void addGrades_Click(object sender, RoutedEventArgs e) {
-
+            popGrades.pop();
         }
 
         private void submit_Click(object sender, RoutedEventArgs e) {
@@ -79,7 +85,8 @@ namespace College_Planner {
             }
             if (flagReturn) return;
             Course course = new Course(txtID.Text, txtName.Text, credits, txtBuilding.Text, txtRoom.Text);
-            course.professor = cbxProfessor.SelectedItem as Professor;      
+            course.professor = cbxProfessor.SelectedItem as Professor;
+            if (grades != null) course.grades = grades;   
             AddCourse(course);
             drop();
         }

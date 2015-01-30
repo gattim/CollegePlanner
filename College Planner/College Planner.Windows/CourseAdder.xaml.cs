@@ -23,7 +23,6 @@ namespace College_Planner {
 
         public CourseAdder() {
             InitializeComponent();
-            popProfessor.AddProfessor += addProfessorToCbx;
             popGrades.AddGrades += PopGrades_AddGrades;
         }
 
@@ -39,6 +38,8 @@ namespace College_Planner {
         private void clear() {
             txtID.Text = "";
             txtName.Text = "";
+            txtCredits.Text = "";
+            txtBuilding.Text = "";
             txtRoom.Text = "";
             tbMon.IsChecked = false;
             tbTues.IsChecked = false;
@@ -51,8 +52,8 @@ namespace College_Planner {
         public ProfessorAdder getProfessorAdder() { return popProfessor; }
 
         private void addProfessorToCbx(Professor professor) {
-            cbxProfessor.Items.Add(professor.name);
-            cbxProfessor.SelectedValue = professor.name;
+            cbxProfessor.Items.Add(professor);
+            cbxProfessor.SelectedValue = professor;
         }
         private void PopGrades_AddGrades(Grades g) {
             grades = g;
@@ -93,6 +94,14 @@ namespace College_Planner {
 
         private void cancel_Click(object sender, RoutedEventArgs e) {
             drop();
+        }
+
+        private void populateProfessors(object sender, object e) {
+            cbxProfessor.Items.Clear();
+            cbxProfessor.Items.Add("Unknown");
+            foreach (Professor professor in Database.professors) {
+                cbxProfessor.Items.Add(professor);
+            }
         }
     }
 }

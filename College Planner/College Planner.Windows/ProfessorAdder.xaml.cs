@@ -45,7 +45,7 @@ namespace College_Planner {
                 txtName.Background = new SolidColorBrush(Colors.Yellow);
             } else {
                 Professor newProfessor = new Professor(txtName.Text, txtBuilding.Text, txtRoom.Text, txtPhone.Text, txtEmail.Text);
-                AddProfessor(newProfessor);
+                Database.addProfessor(newProfessor);
                 drop();
             }
         }

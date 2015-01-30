@@ -19,19 +19,11 @@ namespace College_Planner {
     public sealed partial class TaskList : UserControl {
         public TaskList() {
             this.InitializeComponent();
+            
         }
 
         private void addTask(object sender, RoutedEventArgs e) {
             popupAddTask.IsOpen = true;
-
-        }
-
-        private void addTaskPressed(object sender, PointerRoutedEventArgs e) {
-            
-        }
-
-        private void addTaskReleased(object sender, PointerRoutedEventArgs e) {
-
         }
 
         private void btnSubmitTask_Click(object sender, RoutedEventArgs e) {
@@ -44,6 +36,9 @@ namespace College_Planner {
             txtName.Text = "";
             popupAddTask.IsOpen = false;
         }
-    }
 
+        public void addCourse(Course course) {
+            cbxCourse.Items.Add(course);
+        }
+    }
 }

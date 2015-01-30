@@ -44,7 +44,7 @@
                 <TextBox x:Name="txtName" Grid.Column="1" Grid.Row="1" Opacity=".75" BorderBrush="Black"/>
                 
                 <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-                    <ComboBox x:Name="cbxProfessor" SelectedIndex="0" Opacity=".75" BorderBrush="Black" Width="300">
+                    <ComboBox x:Name="cbxProfessor" SelectedIndex="0" Opacity=".75" BorderBrush="Black" Width="300" DropDownOpened="populateProfessors">
                         <ComboBoxItem>Unknown</ComboBoxItem>
                     </ComboBox>
                     <Button x:Name="btnAddProfessor" Height="35" Width="35" VerticalAlignment="Center" Click="btnAddProfessor_Click">

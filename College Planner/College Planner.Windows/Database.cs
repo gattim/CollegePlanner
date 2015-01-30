@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace College_Planner {
 
-    public class Database {
-        private List<Professor> professors = new List<Professor>();
-        private List<Course> courses = new List<Course>();
-        private List<Task> tasks = new List<Task>();
+    public static class Database {
+        public static List<Professor> professors = new List<Professor>();
+        public static List<Course> courses = new List<Course>();
+        public static List<Task> tasks = new List<Task>();
 
-        public void addProfessor(Professor professor) { professors.Add(professor); }
-        public void addCourse(Course course) { courses.Add(course); }
-        public void addTask(Task task) { tasks.Add(task); }
+        public static void addProfessor(Professor professor) { professors.Add(professor); }
+        public static void addCourse(Course course) { courses.Add(course); }
+        public static void addTask(Task task) { tasks.Add(task); }
 
     }
 }

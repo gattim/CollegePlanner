@@ -21,7 +21,7 @@ namespace College_Planner {
             this.InitializeComponent();
         }
 
-        public void addCourse(Course course) {
+        public void addCourse(CourseDisplay course) {
             spCourses.Children.Add(course);
         }
     }

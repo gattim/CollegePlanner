@@ -20,5 +20,9 @@ namespace College_Planner {
             this.email = email;
         }
 
+        public override string ToString() {
+            return name;
+        }
+
     }
 }

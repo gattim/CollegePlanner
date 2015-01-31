@@ -21,7 +21,6 @@ namespace College_Planner {
             InitializeComponent();
             instantiateTimeText();
             setUpTimers();
-            
         }
 
         private void timer_Tick(object sender, object e) {
@@ -56,7 +55,7 @@ namespace College_Planner {
         }
 
         private void setUpTimers() {
-            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Second), 0, 0);
+            nowBar.Margin = new Thickness(0, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), 0, 0);
 
             DispatcherTimer nowBarTimer = new DispatcherTimer();
             nowBarTimer.Interval = TimeSpan.FromMinutes(1);
@@ -72,7 +71,7 @@ namespace College_Planner {
         private void nowBarFocusTimer_Tick(object sender, object e) {
             DispatcherTimer nowBarFocusTimer = sender as DispatcherTimer;
             nowBarFocusTimer.Interval = TimeSpan.FromMinutes(5);
-            scrollViewer.ChangeView(null, (DateTime.Now.Hour * 60), null, false);
+            scrollViewer.ChangeView(null, (DateTime.Now.Hour * 60) + (DateTime.Now.Minute), null, false);
         }
     }
 }

@@ -27,12 +27,23 @@ namespace College_Planner
         {
             InitializeComponent();
             settingsAndFunctions.getCourseAdder().AddCourse += AddCourseToDatabase;
+            calendar.ViewChanged += viewChanged;
         }
 
         private void AddCourseToDatabase(Course course) {
             Database.addCourse(course);
             courseList.addCourse(new CourseDisplay(course));
             taskList.addCourse(course);
+        }
+
+        private void viewChanged(ToggleSwitch ts) {
+            if (ts.IsOn) {
+                daySchedule.IsEnabled = false;
+                daySchedule.Visibility = Visibility.Collapsed;
+            } else {
+                daySchedule.IsEnabled = true;
+                daySchedule.Visibility = Visibility.Visible;
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ namespace College_Planner {
             InitializeComponent();
             instantiateDaysArray();
             clear();
-            populate(datePicker.Date.Year, datePicker.Date.Month);     
+            populate(DateTime.Today.Year, DateTime.Today.Month);     
         }
 
         private void Day_PointerPressed(object sender, PointerRoutedEventArgs e) {
@@ -36,21 +36,6 @@ namespace College_Planner {
             } 
             newSelectedDay.select();
             selectedDay = newSelectedDay;
-        }
-
-        private void dateChanged(object sender, DatePickerValueChangedEventArgs e) {
-            DatePicker day = sender as DatePicker;
-            clear();
-            populate(day.Date.Year, day.Date.Month);
-        }
-
-        private void changeView(object sender, RoutedEventArgs e) {
-            ToggleSwitch ts = sender as ToggleSwitch;
-            if (ts.IsOn) {
-                clear();
-            } else {
-                populate(datePicker.Date.Year, datePicker.Date.Month);
-            }
         }
 
         private void instantiateDaysArray() {
@@ -93,7 +78,7 @@ namespace College_Planner {
             days[36] = day37;
         }
 
-        private void clear() {
+        public void clear() {
             foreach (Day day in days) {
                 if (selectedDay != null) {
                     selectedDay.deselect();
@@ -105,7 +90,7 @@ namespace College_Planner {
             }
         }
 
-        private void populate(int year, int month) {
+        public void populate(int year, int month) {
             int daysInMonth = calcNumDaysInMonth(year, month);
             int firstWeekDayOfMonth = calcFirstDay(year, month);
 

@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
         <local:TaskList x:Name="taskList" Grid.Column="0" Grid.Row="1"/>
         <local:SettingsAndFunctions x:Name="settingsAndFunctions" Grid.Row="0"  Grid.Column="1" />
-        <local:Month x:Name="monthCalendar" Grid.Column="1" Grid.Row="1"/>
+        <local:Calendar x:Name="calendar" Grid.Column="1" Grid.Row="1"/>
         <local:DaySchedule x:Name="daySchedule" Grid.Column="2" Grid.Row="1"/>
         <local:CourseList x:Name="courseList" Grid.Column="1" Grid.Row="2"/>
     </Grid>

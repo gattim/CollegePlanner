@@ -105,19 +105,24 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <SDKReference Include="Microsoft.VCLibs, version=11.0">
+      <Name>Microsoft Visual C++ Runtime Package</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT, Version=3.8.8.1">
+      <Name>SQLite for Windows Runtime</Name>
+    </SDKReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Course.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="CourseAdder.xaml.cs">
       <DependentUpon>CourseAdder.xaml</DependentUpon>
     </Compile>
     <Compile Include="CourseDisplay.xaml.cs">
       <DependentUpon>CourseDisplay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
     <Compile Include="Grade.cs" />
     <Compile Include="GradesAdder.xaml.cs">
       <DependentUpon>GradesAdder.xaml</DependentUpon>
@@ -141,7 +146,7 @@
     <Compile Include="Hour.xaml.cs">
       <DependentUpon>Hour.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Month.xaml.cs">
@@ -150,17 +155,22 @@
     <Compile Include="NowBar.xaml.cs">
       <DependentUpon>NowBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Professor.cs" />
+    <Compile Include="Models\Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsAndFunctions.xaml.cs">
       <DependentUpon>SettingsAndFunctions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
     <Compile Include="Task.xaml.cs">
       <DependentUpon>Task.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaskList.xaml.cs">
       <DependentUpon>TaskList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CoursesViewModel.cs" />
+    <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Week.xaml.cs">
       <DependentUpon>Week.xaml</DependentUpon>
     </Compile>
@@ -170,6 +180,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="College Planner.Windows_TemporaryKey.pfx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AddBuildingBackground.jpg" />
@@ -241,7 +252,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

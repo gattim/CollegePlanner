@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using College_Planner.Models;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -25,6 +26,10 @@ namespace College_Planner
     /// </summary>
     public sealed partial class App : Application
     {
+
+        public string DBPath { get; set; }
+        public int CurrentCourseId { get; set; }
+
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -103,6 +108,16 @@ namespace College_Planner
 
             // Ensure the current window is active
             Window.Current.Activate();
+
+            this.DBPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "courses.sqlite");
+
+            using (var db = new SQLite.SQLiteConnection(this.DBPath)) {
+                db.CreateTable<Course>();
+                db.CreateTable<Task>();
+                db.CreateTable<Professor>();
+            }
+
+            Window.Current.Content = rootFrame;
         }
 
 #if WINDOWS_PHONE_APP

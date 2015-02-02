@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,27 +12,28 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.UI.Xaml.Shapes;
+using College_Planner.Models;
+using College_Planner.ViewModels;
 
 
 namespace College_Planner
 {
-    
 
     public sealed partial class MainPage : Page
     {
+        CoursesViewModel coursesViewModel = null;
+        ObservableCollection<CourseViewModel> courses = null;
+        
 
         public MainPage()
         {
             InitializeComponent();
-            settingsAndFunctions.getCourseAdder().AddCourse += AddCourseToDatabase;
             calendar.ViewChanged += viewChanged;
         }
 
-        private void AddCourseToDatabase(Course course) {
-            Database.addCourse(course);
-            courseList.addCourse(new CourseDisplay(course));
-            taskList.addCourse(course);
+        protected override void OnNavigatedTo(NavigationEventArgs e) {
+            coursesViewModel = new CoursesViewModel();
+            courses = coursesViewModel.GetCourses();
         }
 
         private void viewChanged(ToggleSwitch ts) {
